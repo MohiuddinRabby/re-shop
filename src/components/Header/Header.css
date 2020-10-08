@@ -10,12 +10,37 @@
   font-size: 20px;
 }
 .header nav ul li {
-  color: #fff;
+  position: relative;
+  display: inline-block;
+  float: none;
+  list-style: none;
+  font-size: 13px;
+  color: #cfcfcf;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 40px;
   margin-right: 10px;
-  text-decoration: none;
+  background: none;
+  text-align: left;
   cursor: pointer;
-  font-size: 20px;
 }
 .header nav ul li:hover {
-  background-color: gray;
+  color: #ff9900;
+}
+.actives {
+  color: #ff9900;
+}
+.dropdown-menu {
+  background-color: #031d2c;
+  color: #fff;
+}
+.dropdown .dropdown-menu .dropdown-item {
+  font-size: 13px;
+}
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown > .dropdown-toggle:active {
+  pointer-events: none;
 }
