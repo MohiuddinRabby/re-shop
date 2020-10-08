@@ -1,0 +1,21 @@
+.header {
+  margin-top: 50px;
+}
+.header {
+  text-align: center;
+}
+.header nav {
+  background-color: #343a40;
+  line-height: 40px;
+  font-size: 20px;
+}
+.header nav ul li {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.header nav ul li:hover {
+  background-color: gray;
+}
