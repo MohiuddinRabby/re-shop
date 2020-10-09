@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const HomeProducts = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+const HomeProducts = (props) => {
+  const { img } = props.hotProduct;
+  return (
+    <div className="card">
+      <img src={img} className="card-img" alt="" />
+    </div>
+  );
 };
 
 export default HomeProducts;
