@@ -1,0 +1,9 @@
+.nav-tabs {
+  border-top: 1px solid gray;
+}
+.nav-item a {
+  color: #cfcfcf;
+}
+#cat-navs {
+  margin-top: 66px;
+}

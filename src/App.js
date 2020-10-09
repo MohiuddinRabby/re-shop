@@ -1,16 +1,19 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import CategoryNav from "./components/Header/CategoryNav";
-import Header from "./components/Header/Header";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./components/Home/Home";
+import CategoryNav from "./components/Nav/CategoryNav";
+import Nav from "./components/Nav/Nav";
 const App = () => {
   return (
-    <div>
-      <Router>
-        <Header></Header>
-        <CategoryNav />
-        <Switch></Switch>
-      </Router>
-    </div>
+    <Router>
+      <Nav></Nav>
+      <CategoryNav></CategoryNav>
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 

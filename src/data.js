@@ -5,6 +5,7 @@ const data = [
     price: 10.99,
     img: "https://i.ibb.co/0FRtC8Y/pexels-bich-tran-1714341.jpg",
     category: "desktop",
+    popularity: "hot",
   },
   {
     id: "2",
@@ -12,6 +13,7 @@ const data = [
     price: 100,
     img: "https://i.ibb.co/R4TCGc3/pexels-cristian-benavides-2049411.jpg",
     category: "desktop",
+    popularity: "hot",
   },
   {
     id: "3",
@@ -19,6 +21,7 @@ const data = [
     price: 100,
     img: "https://i.ibb.co/0FRtC8Y/pexels-bich-tran-1714341.jpg",
     category: "desktop",
+    popularity: "hot",
   },
   {
     id: "4",
@@ -96,6 +99,7 @@ const data = [
     price: 19.25,
     img: "https://i.ibb.co/0FRtC8Y/pexels-bich-tran-1714341.jpg",
     category: "monitor",
+    popularity: "hot",
   },
   {
     id: "15",
@@ -187,6 +191,7 @@ const data = [
     price: 136.0,
     img: "https://i.ibb.co/hW8grXD/pexels-pixabay-50690.jpg",
     category: "camera",
+    popularity: "hot",
   },
   {
     id: "28",
@@ -243,9 +248,7 @@ const data = [
     price: 185.0,
     img: "https://i.ibb.co/K67Hty5/pexels-alessandro-oliverio-1472443.jpg",
     category: "gaming",
+    popularity: "hot",
   },
 ];
 export default data;
-
-
-
