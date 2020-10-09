@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import shop from "../../img/shop.svg";
 import cartLogo from "../../img/cart2.svg";
-import { Link } from "react-router-dom";
+import { CartContext } from "../../global/CartContext";
+
 const Nav = () => {
+  const cart = useContext(CartContext);
+  console.log(cart);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <Link to="/" className="navbar-brand">
+      <a href="/" className="navbar-brand">
         <img src={shop} style={{ width: "40px", height: "40px" }} alt="" />
-      </Link>
+      </a>
       <button
         className="navbar-toggler"
         type="button"
