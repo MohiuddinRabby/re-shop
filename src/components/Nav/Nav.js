@@ -1,11 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import shop from "../../img/shop.svg";
 import cartLogo from "../../img/cart2.svg";
 import { CartContext } from "../../global/CartContext";
+import Cart from "../Cart/Cart";
 
 const Nav = () => {
-  const cart = useContext(CartContext);
-  console.log(cart);
+  const { qty } = useContext(CartContext);
+  const [showModal, setShowModal] = useState(false);
+  const handleCloseModal = () => setShowModal(false);
+  const handleShowModal = () => setShowModal(true);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <a href="/" className="navbar-brand">
@@ -25,13 +28,15 @@ const Nav = () => {
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav m-auto">
-          <li className="nav-item active">
+          <li className="nav-item" onClick={handleShowModal}>
             <img
               src={cartLogo}
               alt=""
               style={{ width: "35px", height: "35px" }}
             />
-            <span style={{ color: "#fff", fontSize: "20px" }}>0</span>
+            <span style={{ color: "#fff", fontSize: "20px" }}>
+              {qty}
+            </span>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
@@ -49,6 +54,11 @@ const Nav = () => {
           </button>
         </form>
       </div>
+      {showModal ? (
+        <Cart show={showModal} handleClose={handleCloseModal}></Cart>
+      ) : (
+        false
+      )}
     </nav>
   );
 };
