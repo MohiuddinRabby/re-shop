@@ -1,10 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import shop from "../../img/shop.svg";
 import cartLogo from "../../img/cart2.svg";
 import { CartContext } from "../../global/CartContext";
 import Cart from "../Cart/Cart";
+import data from "../../data";
 
 const Nav = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   const { qty, shoppingCart } = useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => setShowModal(false);
@@ -39,12 +43,11 @@ const Nav = () => {
             </span>
           </li>
         </ul>
-        <form className="form-inline my-2 my-lg-0">
+        <form className="form-inline my-2 my-lg-0" onSubmit={handleSubmit}>
           <input
             className="form-control mr-sm-2"
             type="search"
             placeholder="Search"
-            aria-label="Search"
           />
           <button
             className="btn btn-outline-success my-2 my-sm-0"
