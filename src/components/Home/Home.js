@@ -52,39 +52,37 @@ const Home = () => {
         id="cat-navs"
       >
         <li className="nav-item">
-          <a href="#" className="nav-link" onClick={desktopItems}>
+          <span className="nav-link" onClick={desktopItems}>
             Desktop
-          </a>
+          </span>
         </li>
         <li className="nav-item" onClick={monitorItems}>
-          <a href="#" className="nav-link">
-            Monitor
-          </a>
+          <span className="nav-link">Monitor</span>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link" onClick={laptopItems}>
+          <span className="nav-link" onClick={laptopItems}>
             Laptop
-          </a>
+          </span>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link" onClick={officeItems}>
+          <span className="nav-link" onClick={officeItems}>
             Office Equipment
-          </a>
+          </span>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link" onClick={gamingItems}>
+          <span className="nav-link" onClick={gamingItems}>
             Gaming
-          </a>
+          </span>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link" onClick={cameraItems}>
+          <span className="nav-link" onClick={cameraItems}>
             Camera
-          </a>
+          </span>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link" onClick={upsItems}>
+          <span className="nav-link" onClick={upsItems}>
             UPS
-          </a>
+          </span>
         </li>
       </ul>
       <div className="container py-5">
@@ -106,9 +104,7 @@ const Home = () => {
                           alt=""
                         />
                         <p className="card-header">{products.name}</p>
-                        <p className="card-header">
-                          Price: ${products.price}
-                        </p>
+                        <p className="card-header">Price: ${products.price}</p>
                       </div>
                       <button
                         className="btn btn-info btn-sm"

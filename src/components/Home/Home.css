@@ -1,7 +1,7 @@
 .nav-tabs {
   border-top: 1px solid gray;
 }
-.nav-item a {
+.nav-item span {
   cursor: pointer;
   color: #cfcfcf;
 }

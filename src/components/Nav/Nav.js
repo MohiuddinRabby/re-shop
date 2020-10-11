@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import shop from "../../img/shop.svg";
 import cartLogo from "../../img/cart2.svg";
 import { CartContext } from "../../global/CartContext";
 import Cart from "../Cart/Cart";
-import data from "../../data";
+
 
 const Nav = () => {
   const handleSubmit = (e) => {
