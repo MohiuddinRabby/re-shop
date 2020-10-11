@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ScrollToTop from "react-scroll-to-top";
 const Footer = () => {
   return (

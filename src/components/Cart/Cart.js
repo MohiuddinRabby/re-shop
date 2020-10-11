@@ -3,7 +3,7 @@ import { Button, Modal } from "react-bootstrap";
 import { CartContext } from "../../global/CartContext";
 import "./Cart.css";
 const Cart = (props) => {
-  const { dispatch, shoppingCart, totalPrice, qty } = useContext(CartContext);
+  const { dispatch, shoppingCart} = useContext(CartContext);
   return (
     <Modal
       show={props.show}

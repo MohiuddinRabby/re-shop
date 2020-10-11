@@ -9,7 +9,7 @@ const Nav = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  const { qty, shoppingCart } = useContext(CartContext);
+  const {shoppingCart } = useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => setShowModal(false);
   const handleShowModal = () => setShowModal(true);
