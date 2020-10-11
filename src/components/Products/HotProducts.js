@@ -1,11 +1,14 @@
-import React from 'react';
-
+import React from "react";
+import "./Products.css";
 const HotProducts = (props) => {
-    return (
-        <div>
-            <h1>HPS</h1>
-        </div>
-    );
+  const { img } = props.products;
+  return (
+    <div className="hot-items">
+      <div className="card">
+        <img src={img} className="card-img" alt="" />
+      </div>
+    </div>
+  );
 };
 
 export default HotProducts;

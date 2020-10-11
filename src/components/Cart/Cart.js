@@ -15,45 +15,55 @@ const Cart = (props) => {
         <Modal.Title>Cart Info</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div className="cartContainer">
-          <div className="cartDetails">
-            {shoppingCart.length > 0
-              ? shoppingCart.map((cart) => (
-                  <div className="cart" key={cart.id}>
-                    <span className="cartProImage">
-                      <img src={cart.img} alt="" />
-                      <span className="imageCount">{cart.qty}</span>
-                    </span>
-                    <span className="cartProductName">{cart.name}</span>
-                    <span className="cartProductPrice">${cart.price}.00</span>
+        {shoppingCart.length > 0 ? (
+          shoppingCart.map((cart) => (
+            <table className="table" key={cart.id}>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src={cart.img}
+                      style={{ width: "50px", height: "50px" }}
+                      alt=""
+                    />
+                  </td>
+                  <td>{cart.name}</td>
+                  <td>Unit price : {cart.price}</td>
+                  <td>
+                    Qty :
                     <span
-                      className="inc"
-                      onClick={() =>
-                        dispatch({ type: "INC", id: cart.id, cart: cart })
-                      }
-                    >
-                      <i className="fas fa-plus"></i>
-                    </span>
-                    <span className="productQuantity">{cart.qty}</span>
-                    <span
-                      className="dec"
                       onClick={() =>
                         dispatch({ type: "DEC", id: cart.id, cart: cart })
                       }
                     >
                       <i className="fas fa-minus"></i>
                     </span>
-                    <span className="productTotalPrice">
-                      ${cart.qty * cart.price}.00
+                    {cart.qty}
+                    <span
+                      onClick={() =>
+                        dispatch({ type: "INC", id: cart.id, cart: cart })
+                      }
+                    >
+                      <i className="fas fa-plus"></i>
                     </span>
-                    <button className="deleteCartPro">
+                  </td>
+                  <td>Total price : {cart.price * cart.qty}</td>
+                  <td>
+                    <span
+                      onClick={() =>
+                        dispatch({ type: "DELETE", id: cart.id, cart: cart })
+                      }
+                    >
                       <i className="fas fa-trash-alt"></i>
-                    </button>
-                  </div>
-                ))
-              : "Yourr Cart is currently empty!"}
-          </div>
-        </div>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          ))
+        ) : (
+          <h2 className="text-danger">Your cart is empty</h2>
+        )}
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={props.handleClose}>

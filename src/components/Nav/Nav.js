@@ -5,7 +5,7 @@ import { CartContext } from "../../global/CartContext";
 import Cart from "../Cart/Cart";
 
 const Nav = () => {
-  const { qty } = useContext(CartContext);
+  const { qty, shoppingCart } = useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => setShowModal(false);
   const handleShowModal = () => setShowModal(true);
@@ -35,7 +35,7 @@ const Nav = () => {
               style={{ width: "35px", height: "35px" }}
             />
             <span style={{ color: "#fff", fontSize: "20px" }}>
-              {qty}
+              {shoppingCart.length}
             </span>
           </li>
         </ul>

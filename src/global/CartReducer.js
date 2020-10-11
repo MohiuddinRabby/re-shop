@@ -48,6 +48,18 @@ export const CartReducer = (state, action) => {
       } else {
         return state;
       }
+    case "DELETE":
+      const filtered = shoppingCart.filter(
+        (product) => product.id !== action.id
+      );
+      product = action.cart;
+      updatedQty = qty - product.qty;
+      updatedPrice = totalPrice - product.price * product.qty;
+      return {
+        shoppingCart: [...filtered],
+        totalPrice: updatedPrice,
+        qty: updatedQty,
+      };
     default:
       return state;
   }
